@@ -4,7 +4,7 @@
 
 ## 🚀 Overview
 
-This project is an experimental web interface developed for personal curiosity, as part of a **Deep Learning University Exam**. 
+This project is an experimental web interface developed for personal curiosity, after training a Neural network for a **Deep Learning University Exam**. 
 
 The goal was to take a standard Neural Network model (trained for my DL exam based on the *Ad Click Prediction* dataset) and try to make it interactable user interface, rather than just leaving it in a static Python notebook. 
 
