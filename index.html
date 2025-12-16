@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdClick Neural Visualizer</title>
+    <!-- TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AdClick <span class="highlight">Neural Visualizer</span></h1>
+            <p>Real-time Deep Learning Prediction Interface</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="panel input-panel">
+                <h2>Input Parameters</h2>
+                <form id="predictForm">
+                    <div class="form-group">
+                        <label>Daily Time on Site (min)</label>
+                        <input type="range" id="dailyTime" min="0" max="120" value="60"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>60</output>
+                    </div>
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="range" id="age" min="18" max="100" value="30"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>30</output>
+                    </div>
+                    <div class="form-group">
+                        <label>Area Income ($<span id="incomeVal">50000</span>)</label>
+                        <input type="range" id="income" min="13996" max="79485" value="50000"
+                            oninput="document.getElementById('incomeVal').innerText = this.value">
+                    </div>
+                    <div class="form-group">
+                        <label>Daily Internet Usage (min)</label>
+                        <input type="range" id="internetUsage" min="0" max="300" value="200"
+                            oninput="this.nextElementSibling.value = this.value">
+                        <output>200</output>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select id="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select id="country">
+                            <option>Loading...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ad Topic</label>
+                        <select id="adTopic">
+                            <option>Loading...</option>
+                        </select>
+                    </div>
+                    <!-- Date inputs removed, utilizing default background values -->
+                    <!-- Date inputs removed, utilizing default background values -->
+                    <!-- Real-time prediction is enabled via event listeners -->
+                </form>
+            </section>
+
+            <!-- Visualization Section -->
+            <section class="panel viz-panel">
+                <div id="metricsBox">
+                    <div class="metric">
+                        <span class="label">Test Accuracy</span>
+                        <span class="value" id="accValue">Loading...</span>
+                    </div>
+                    <div class="metric">
+                        <span class="label">ROC-AUC</span>
+                        <span class="value" id="rocValue">Loading...</span>
+                    </div>
+                </div>
+
+                <div class="neural-display">
+                    <div class="probability-ring">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress" id="probRing" cx="50" cy="50" r="45" pathLength="100"></circle>
+                        </svg>
+                        <div class="prob-text">
+                            <span id="probPercent">0.0%</span>
+                            <span class="label">Click Probability</span>
+                        </div>
+                    </div>
+                    <div class="status-msg" id="statusMsg">Initializing...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
