@@ -14,7 +14,7 @@ It is a **Beta** version designed to visualize how the model makes decisions in 
 
 I wanted to explore how we can peek inside the "black box" of a trained model:
 - **Interactive Visualization:** Experimenting with how changing inputs (like Age or Time on Site) affects the model's confidence in real-time.
-- **Model Behavior:** You might notice some extreme predictions (e.g., close to 100% probability for very low internet usage). This reflects what the model learned from the exam dataset, including its biases and outliers.
+- **Model Behavior:** You might notice some extreme predictions (e.g., close to 100% probability for very low internet usage, less % for younger ages and viceversa). This reflects what the model learned from the exam dataset, including its biases and outliers.
 
 ## 🛠️ Tools Used
 
