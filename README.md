@@ -1,6 +1,6 @@
 # AdClick Neural Visualizer (Beta) 🧠📊
 
-> **Live Demo:** [Check out the App](https://chicholegui.github.io/AdClickPredictor/)
+> **Live Demo:** [Check out the App](https://chicholegui.github.io/AdClickNeuralVisualizer/)
 
 ## 🚀 Overview
 
